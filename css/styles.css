@@ -239,6 +239,8 @@ a {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+
+  cursor: pointer;
 }
 
 .main-activity-button:hover,
@@ -792,14 +794,23 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+
+  transform: scale(1);
+  transition: scale 500ms opacity 1s;
 }
 
-/* .backdrop.is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-} */
+  visibility: hidden;
 
-.modal-window {
+  transform: scale(0);
+}
+
+.modal {
+  display: flex;
+  justify-content: flex-end;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -814,6 +825,6 @@ a {
   border-radius: 4px;
 }
 
-.modal-window-closing {
+.modal-closing {
   padding: 8px;
 }
