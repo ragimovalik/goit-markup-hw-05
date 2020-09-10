@@ -613,8 +613,6 @@ a {
 }
 
 .footer-center .socials-link {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -793,13 +791,13 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
+
   background-color: rgba(0, 0, 0, 0.2);
 
-  transform: scale(1);
-  transition: scale 500ms opacity 1s;
+  transition: 500ms;
 }
 
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -808,14 +806,9 @@ a {
 }
 
 .modal {
-  display: flex;
-  justify-content: flex-end;
-
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-
   width: 528px;
   height: 581px;
 
@@ -823,8 +816,12 @@ a {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transform: translate(-50%, -50%);
 }
 
 .modal-closing {
+  display: block;
+  margin-left: auto;
   padding: 8px;
 }

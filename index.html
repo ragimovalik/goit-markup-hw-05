@@ -60,7 +60,7 @@
           <h1 class="main-activity-title">
             Эффективные решения для вашего бизнеса
           </h1>
-          <button class="main-activity-button" type="submit">
+          <button class="main-activity-button" type="submit" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -547,12 +547,13 @@
       </div>
     </footer>
     <!-- Modal window -->
-    <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <svg class="modal-closing" width="30" height="30">
+        <svg class="modal-closing" width="30" height="30" data-modal-close>
           <use href="./images/sprite.svg#close" />
         </svg>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
