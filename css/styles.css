@@ -806,6 +806,7 @@ a {
 }
 
 .modal {
+  padding: 8px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -823,5 +824,4 @@ a {
 .modal-closing {
   display: block;
   margin-left: auto;
-  padding: 8px;
 }
