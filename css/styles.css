@@ -21,6 +21,9 @@
   --txt-main-inactive-foot-address: #ffffff;
   --txt-footer-phone-n-mail: rgba(255, 255, 255, 0.6);
   --icons-socials-n-customers: #afb1b8;
+
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .body {
@@ -98,7 +101,7 @@ a {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 
   color: var(--txt-nav-n-headings);
 
@@ -152,8 +155,9 @@ a {
 
 .nav-address-active {
   display: flex;
+  align-items: center;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 
   color: var(--txt-paragraphs);
 
@@ -229,7 +233,8 @@ a {
   border: transparent;
   padding: 10px 32px;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--transition-duration)
+    var(--transition-timing-function);
 
   background-color: var(--bgc-button);
   color: var(--txt-main-inactive-foot-address);
@@ -465,7 +470,8 @@ a {
   height: 44px;
   border-radius: 50%;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
 
   background-color: var(--bgc-primary);
 }
@@ -481,6 +487,8 @@ a {
 }
 
 .icons-social {
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+
   fill: #afb1b8;
   width: 20px;
   height: 20px;
@@ -516,7 +524,8 @@ a {
   width: 170px;
   height: 90px;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .our-customers-link:hover,
@@ -534,6 +543,8 @@ a {
 }
 
 .icons-customers {
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+
   fill: var(--icons-socials-n-customers);
 }
 
@@ -583,7 +594,7 @@ a {
 
 .footer-address a {
   color: var(--txt-footer-phone-n-mail);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .footer-address a:hover,
@@ -658,7 +669,7 @@ a {
   border: none;
   outline-color: transparent;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-duration) var(--transition-timing-function);
 
   background-color: var(--bgc-our-team);
   color: var(--txt-nav-n-headings);
@@ -693,7 +704,8 @@ a {
   flex-basis: calc((100% - 60px) / 3);
   list-style-type: none;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .projects-list-item:not(:nth-child(3n)) {
@@ -769,8 +781,9 @@ a {
   transform: translateY(100%);
   opacity: 0;
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-duration)
+      var(--transition-timing-function),
+    opacity var(--transition-duration) var(--transition-timing-function);
 }
 
 .projects-description-overlay p {
